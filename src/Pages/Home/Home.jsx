@@ -1,6 +1,5 @@
 import "./Home.css";
 import logo from "../../Assets/logop.png";
-import Header from "../../Components/Header/Header";
 
 function Home() {
   return (

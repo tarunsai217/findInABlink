@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import axios from "axios";
 import { googleLogout, useGoogleLogin } from "@react-oauth/google";
 import { useNavigate } from "react-router-dom";
@@ -36,7 +36,6 @@ function Header() {
 
   const login = useGoogleLogin({
     onSuccess: (codeResponse) => {
-      console.log("codeResponse", codeResponse);
       dispatch(setGoogleResponse(codeResponse));
       navigate("/main");
     },
