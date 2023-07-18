@@ -58,7 +58,7 @@ function Header() {
   };
 
   return (
-    <header className="bg-[#1E1E1E] flex justify-between ml-24 mr-24 py-4">
+    <header className="bg-[#1E1E1E] flex justify-between ml-6 mr-6 md:ml-24 md:mr-24 py-4">
       <ul className="ml-0 flex items-center">
         <li className="font-[700] text-2xl cursor-pointer">𝕗𝕚𝕟𝕕𝕀𝕟𝔸𝔹𝕝𝕚𝕟𝕜</li>
       </ul>

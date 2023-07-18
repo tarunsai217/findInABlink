@@ -3,8 +3,8 @@ import logo from "../../Assets/logop.png";
 
 function Home() {
   return (
-    <main className="flex justify-center items-center mr-40 ml-40 height-auto flex-1 mb-28 ">
-      <section className="w-[50%]">
+    <main className="flex flex-col md:flex-row justify-center  items-center mr-40 ml-40 height-auto flex-1 mb-28 ">
+      <section className="md:w-[50%] mt-8 md:mt-0">
         <h2 className="text-6xl mb-6 gradient-text">
           Rediscover Lost Possessions Swiftly - FindInABlink, Your Local-First
           App!
@@ -15,7 +15,7 @@ function Home() {
           what's yours swiftly and rediscover peace of mind today!
         </p>
       </section>
-      <section className="w-[50%] flex justify-center items-center">
+      <section className="md:w-[50%] hidden md:flex justify-center items-center">
         {/* <img
             width="350"
             height="500"
