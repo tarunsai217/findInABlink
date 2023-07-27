@@ -9,6 +9,7 @@ import {
   setGoogleResponse,
   setProfileData,
 } from "../../Redux/Features/userSlice";
+import { Link } from "react-router-dom";
 
 function Header() {
   const user = useSelector((state) => state.user.googleResponse);
@@ -60,7 +61,10 @@ function Header() {
   return (
     <header className="bg-[#1E1E1E] flex justify-between ml-6 mr-6 md:ml-24 md:mr-24 py-4">
       <ul className="ml-0 flex items-center">
-        <li className="font-[700] text-2xl cursor-pointer">𝕗𝕚𝕟𝕕𝕀𝕟𝔸𝔹𝕝𝕚𝕟𝕜</li>
+        <Link to="/">
+          {" "}
+          <li className="font-[700] text-2xl cursor-pointer">𝕗𝕚𝕟𝕕𝕀𝕟𝔸𝔹𝕝𝕚𝕟𝕜</li>
+        </Link>
       </ul>
       <ul className="ml-0 flex ">
         <li className="flex items-center hidden">

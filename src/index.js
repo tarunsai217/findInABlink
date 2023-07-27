@@ -5,17 +5,20 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { GOOGLE_WEB_CLIENT_ID } from "./config";
-import { store } from "./Redux/Store/store";
+import { PersistGate } from "redux-persist/integration/react";
+import { store, persistor } from "./Redux/Store/store";
 import { Provider } from "react-redux";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <GoogleOAuthProvider clientId={GOOGLE_WEB_CLIENT_ID}>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    </GoogleOAuthProvider>
+    <PersistGate loading={null} persistor={persistor}>
+      <GoogleOAuthProvider clientId={GOOGLE_WEB_CLIENT_ID}>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </GoogleOAuthProvider>
+    </PersistGate>
   </Provider>
 );
 

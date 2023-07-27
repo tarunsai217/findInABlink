@@ -19,6 +19,14 @@ function App() {
               </PrivateRoute>
             }
           />
+          <Route
+            path="/main"
+            element={
+              <PrivateRoute>
+                <Main />
+              </PrivateRoute>
+            }
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
