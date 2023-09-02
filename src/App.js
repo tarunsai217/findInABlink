@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
-import Main from "./Pages/Main/Main";
+import Comedy from "./Pages/Comedy/Comedy";
 import NotFound from "./Pages/NotFound/NotFound";
 import Layout from "./Layout/Layout";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
