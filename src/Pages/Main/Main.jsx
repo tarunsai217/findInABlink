@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { google } from "googleapis";
+// import { google } from "googleapis";
 import { useSelector } from "react-redux";
 function Main() {
   const user = useSelector((state) => state.user.googleResponse);
@@ -9,21 +9,21 @@ function Main() {
     setLoading(true);
 
     console.log("user", user);
-    const youtube = google.youtube({
-      version: "v3",
-      auth: "AIzaSyAkL3mKIvuetfhs2s7CLrKjUGXJBW7wvEw",
-    });
+    // const youtube = google.youtube({
+    //   version: "v3",
+    //   auth: "AIzaSyAkL3mKIvuetfhs2s7CLrKjUGXJBW7wvEw",
+    // });
 
-    // Prepare the video resource
-    const videoResource = {
-      snippet: {
-        title: "Uploaded Video Title",
-        description: "Uploaded Video Description",
-      },
-      status: {
-        privacyStatus: "private",
-      },
-    };
+    // // Prepare the video resource
+    // const videoResource = {
+    //   snippet: {
+    //     title: "Uploaded Video Title",
+    //     description: "Uploaded Video Description",
+    //   },
+    //   status: {
+    //     privacyStatus: "private",
+    //   },
+    // };
 
     setLoading(false);
   }
