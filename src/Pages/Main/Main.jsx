@@ -11,7 +11,7 @@ function Main() {
     let data = {
       accessToken: user["access_token"],
     };
-    let response = await axios.post("http://localhost:5000/test", data);
+    let response = await axios.post("http://localhost:5000", data);
     console.log("response", response);
     setLoading(false);
   }
