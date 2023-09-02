@@ -1,30 +1,15 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import axios from "axios";
 function Main() {
   const user = useSelector((state) => state.user.googleResponse);
   const [loading, setLoading] = useState(false);
 
   async function uploadHandler() {
     setLoading(true);
-
     console.log("user", user);
-    console.log("access_token", user["access_token"]);
-    // const youtube = google.youtube({
-    //   version: "v3",
-    //   auth: "AIzaSyAkL3mKIvuetfhs2s7CLrKjUGXJBW7wvEw",
-    // });
-
-    // // Prepare the video resource
-    // const videoResource = {
-    //   snippet: {
-    //     title: "Uploaded Video Title",
-    //     description: "Uploaded Video Description",
-    //   },
-    //   status: {
-    //     privacyStatus: "private",
-    //   },
-    // };
-
+    let response = axios.get("http://localhost:5000/test");
+    console.log("response", response);
     setLoading(false);
   }
   return (
