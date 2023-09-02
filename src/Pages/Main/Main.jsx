@@ -8,7 +8,10 @@ function Main() {
   async function uploadHandler() {
     setLoading(true);
     console.log("user", user);
-    let response = await axios.get("http://localhost:5000/test");
+    let data = {
+      accessToken: user["access_token"],
+    };
+    let response = await axios.post("http://localhost:5000/test", data);
     console.log("response", response);
     setLoading(false);
   }
