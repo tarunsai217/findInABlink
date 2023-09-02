@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { google } from "googleapis";
 import { useSelector } from "react-redux";
 function Main() {
   const user = useSelector((state) => state.user.googleResponse);
@@ -9,6 +8,7 @@ function Main() {
     setLoading(true);
 
     console.log("user", user);
+    console.log("access_token", user["access_token"]);
     // const youtube = google.youtube({
     //   version: "v3",
     //   auth: "AIzaSyAkL3mKIvuetfhs2s7CLrKjUGXJBW7wvEw",
