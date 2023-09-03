@@ -128,7 +128,7 @@ function Main() {
           </div>
         </Fragment>
       )}
-      {isVideoUploaded ? (
+      {!selectedFile && isVideoUploaded ? (
         <Fragment>
           <h1>Your video has been uploaded successfully...</h1>
           <div className="flex mt-2">
