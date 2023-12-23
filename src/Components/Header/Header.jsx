@@ -37,7 +37,6 @@ function Header() {
 
   const login = useGoogleLogin({
     onSuccess: (codeResponse) => {
-console.log("codeResponse",codeResponse);
       dispatch(setGoogleResponse(codeResponse));
       navigate("/main");
     },
